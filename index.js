@@ -2906,7 +2906,12 @@ window.addEventListener("message", ({ data }) => {
     window.playdeckUserLocale = pdData.value;
   }
 
-  if (pdData.method === "getScore") window.playdeckScore = pdData.value;
+  if (pdData.method === "getScore") {
+    window.playdeckScore = pdData.value;
+    window.test = 222;
+  }
+
+  console.log("pdData>>", pdData);
 
   if (pdData.method === "getData") {
     window.playdeckData = pdData.value;
