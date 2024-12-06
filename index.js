@@ -2907,11 +2907,11 @@ window.addEventListener("message", ({ data }) => {
   }
 
   if (pdData.method === "getScore") {
+    console.log("pdData>>", pdData);
     window.playdeckScore = pdData.value;
     window.test = 222;
   }
 
-  console.log("pdData>>", pdData);
 
   if (pdData.method === "getData") {
     window.playdeckData = pdData.value;
